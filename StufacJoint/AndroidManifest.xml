@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.stufacjoint"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".LoginAktivnos" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Glavna_aktivnost" >
+        </activity>
+        <activity
+            android:name=".ProfilAktivnost"
+            android:label="@string/title_activity_profil_aktivnost" >
+        </activity>
+        <activity
+            android:name=".ListaInteresa"
+            android:label="@string/lista_interesa" >
+        </activity>
+        <activity
+            android:name=".InfoAktivnost"
+            android:label="@string/title_activity_info_aktivnost" >
+        </activity>
+        <activity
+            android:name=".MojalListaInteresa"
+            android:label="@string/title_activity_mojal_lista_interesa" >
+        </activity>
+        <activity
+            android:name=".NoviPredlozak"
+            android:label="@string/title_activity_novi_predlozak" >
+        </activity>
+        <activity
+            android:name=".PregledPredloska"
+            android:label="@string/title_activity_pregled_predloska" >
+        </activity>
+        <activity
+            android:name=".WebLokacija"
+            android:label="@string/title_activity_web_lokacija" >
+        </activity>
+    </application>
+
+</manifest>

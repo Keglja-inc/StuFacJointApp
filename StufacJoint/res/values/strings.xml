@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="nazivaplikacije">Stufac Joint</string>
+    <string name="app_name">Stufac Joint</string>
+    <string name="app_podaci">Podaci o aplikaciji</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_profil_aktivnost">Profil</string>
+    <string name="profilgumb">Otvaranje aktivnosti profil</string>
+    <string name="activity_profil_aktivnost">Aktivnost profil</string>
+    <string name="lista_interesa">Lista interesa</string>
+    <string name="title_activity_login_aktivnos">Login</string>
+    <string name="Logingumb">Login</string>
+    <string name="stufacjoint">StuFac Joint</string>
+    <string name="ime">Korisničko ime:</string>
+    <string name="lozinka">Lozinka:</string>
+    <string name="Login">Logiraj</string>
+    <string name="attempts">Preostalo pokušaja:</string>
+    <string name="title_activity_predlosci_interesa">Predlošci Interesa</string>
+    <string name="info">Aplikacija se trenutno nalazi u razvoju. Ovo je verzija 0.1 gdje su napravljeni pogledi i mogućnnost prolaska kroz aktivnosti sa gumbima.</string>
+    <string name="title_activity_info_aktivnost">Info</string>
+    <string name="loginopis">Napomena:\nKorisničko ime: admin\nLozinka: admin\nKako bi se logirali u aplikaciju unesite navedene podatke te double click na gumb logiraj.</string>
+    <string name="spremi">Spremi</string>
+    <string name="odustani">Odustani</string>
+    <string name="poruka">Ovaj gumb trenutno nije u funkciji.</string>
+    <string name="listainteresa">Dio aplikacije koji će biti odrađen u drugoj fazi.</string>
+    <string name="title_activity_mojal_lista_interesa">Vlastita lista</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="napravi_predlozak">Novi Predložak</string>
+    <string name="title_activity_novi_predlozak">Novi Predložak</string>
+    <string name="title_activity_pregled_predloska">Pregled Predloška</string>
+    <string name="title_activity_web_lokacija">Web Lokacija</string>
+
+</resources>
