@@ -30,5 +30,7 @@
     <string name="title_activity_novi_predlozak">Novi Predložak</string>
     <string name="title_activity_pregled_predloska">Pregled Predloška</string>
     <string name="title_activity_web_lokacija">Web Lokacija</string>
+    <string name="facebook_app_id">317389008470430</string>
+    
 
 </resources>
