@@ -8,9 +8,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.preference.PreferenceManager.OnActivityResultListener;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -95,7 +92,7 @@ public class LoginAktivnos extends Activity {
 						
 						@Override
 						public void onComplete(Bundle values) {
-							Intent i=new Intent(getApplicationContext(), Glavna_aktivnost.class);
+							Intent i=new Intent(getApplicationContext(), GlavnaAktivnost.class);
 							startActivity(i);
 							
 						}
@@ -114,57 +111,45 @@ public class LoginAktivnos extends Activity {
 		
 		});
 		
-		
-
-	}
 	
-	public void login(View view){
-	      if(ime.getText().toString().equals("admin") && lozinka.getText().toString().equals("admin")){
-	      
-	      login.setOnClickListener(new OnClickListener() {
+	 login.setOnClickListener(new OnClickListener() {
 			
-			@Override
 			public void onClick(View arg0) {
-				Intent i=new Intent(getApplicationContext(), Glavna_aktivnost.class);
-				startActivity(i);
 				
+				
+				
+				if(ime.getText().toString().equals("admin") && 
+			    		  lozinka.getText().toString().equals("admin")){
+					Intent i=new Intent(getApplicationContext(), GlavnaAktivnost.class);
+					startActivity(i);
+			    	 
+			      }
+			    			
+			   else{
+			      Toast.makeText(getApplicationContext(), "Pokušajte ponovno",
+			      Toast.LENGTH_SHORT).show();
+			      attempts.setBackgroundColor(Color.RED);	
+			      counter--;
+			      attempts.setText(Integer.toString(counter));
+			      if(counter==0){
+			         login.setEnabled(false);
+			      }
+
+				
+			} 
+				
+				
+			
 			}
-	      }
-		);
-	   }	
-	   else{
-	      Toast.makeText(getApplicationContext(), "Pokušajte ponovno",
-	      Toast.LENGTH_SHORT).show();
-	      attempts.setBackgroundColor(Color.RED);	
-	      counter--;
-	      attempts.setText(Integer.toString(counter));
-	      if(counter==0){
-	         login.setEnabled(false);
-	      }
 
-	   }
-	      
-	      
-	}
-	
-	
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.login_aktivnos, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
+			
+	 
+	});
 	}
 }
+	 
+	
+
+	
+	
+

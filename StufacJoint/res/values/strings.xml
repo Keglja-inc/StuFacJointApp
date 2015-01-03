@@ -4,7 +4,6 @@
     <string name="nazivaplikacije">Stufac Joint</string>
     <string name="app_name">Stufac Joint</string>
     <string name="app_podaci">Podaci o aplikaciji</string>
-    <string name="action_settings">Settings</string>
     <string name="title_activity_profil_aktivnost">Profil</string>
     <string name="profilgumb">Otvaranje aktivnosti profil</string>
     <string name="activity_profil_aktivnost">Aktivnost profil</string>
@@ -31,6 +30,14 @@
     <string name="title_activity_pregled_predloska">Pregled Predloška</string>
     <string name="title_activity_web_lokacija">Web Lokacija</string>
     <string name="facebook_app_id">317389008470430</string>
+    <string name="title_activity_glavna_aktivnost">StuFac Joint</string>
     
+    
+    <string-array name="action_settings">
+        <item>Opcije</item>
+        <item >Novosti</item>
+        <item >O aplikaciji</item>
+        
+    </string-array>
 
 </resources>

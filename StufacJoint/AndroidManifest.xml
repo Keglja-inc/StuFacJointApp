@@ -7,7 +7,8 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="14" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -51,7 +52,15 @@
             android:name=".WebLokacija"
             android:label="@string/title_activity_web_lokacija" >
         </activity>
-        <meta-data android:value="@string/facebook_app_id" android:name="com.facebook.sdk.ApplicationId"/>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".GlavnaAktivnost"
+            android:label="@string/title_activity_glavna_aktivnost" >
+        </activity>
     </application>
 
 </manifest>

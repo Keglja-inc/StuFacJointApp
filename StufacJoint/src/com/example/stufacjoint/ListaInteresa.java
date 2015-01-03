@@ -22,7 +22,7 @@ public class ListaInteresa extends Activity {
 			
 			@Override
 			public void onClick(View arg0) {
-				Intent i=new Intent(getApplicationContext(), Glavna_aktivnost.class);
+				Intent i=new Intent(getApplicationContext(), GlavnaAktivnost.class);
 				startActivity(i);
 				
 			}

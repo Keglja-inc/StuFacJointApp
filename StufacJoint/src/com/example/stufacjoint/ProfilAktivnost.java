@@ -22,7 +22,7 @@ public class ProfilAktivnost extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i=new Intent(getApplicationContext(), Glavna_aktivnost.class);
+				Intent i=new Intent(getApplicationContext(), GlavnaAktivnost.class);
 				startActivity(i);
 				
 			}

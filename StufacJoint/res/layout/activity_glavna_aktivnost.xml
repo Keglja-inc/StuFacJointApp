@@ -47,5 +47,11 @@
             android:layout_weight="1"
             android:src="@drawable/oaplikaciji" />
     </LinearLayout>
+    
+    <ListView
+        android:id="@+id/settings_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 </RelativeLayout>
