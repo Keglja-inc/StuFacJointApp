@@ -228,7 +228,6 @@ int layout com_facebook_placepickerfragment_list_row 0x7f030016
 int layout com_facebook_search_bar_layout 0x7f030017
 int layout com_facebook_tooltip_bubble 0x7f030018
 int layout com_facebook_usersettingsfragment 0x7f030019
-int layout fragment_glavna_aktivnost 0x7f03001a
 int menu glavna_aktivnost 0x7f090000
 int menu info_aktivnost 0x7f090001
 int menu lista_interesa 0x7f090002
