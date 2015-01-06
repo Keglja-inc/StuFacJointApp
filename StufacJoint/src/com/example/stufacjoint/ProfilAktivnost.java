@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -40,11 +42,10 @@ public class ProfilAktivnost extends Activity {
 			});
 	}
 
-	/*
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.profil_aktivnost, menu);
+		getMenuInflater().inflate(R.menu.glavna_aktivnost, menu);
 		return true;
 	}
 
@@ -55,9 +56,16 @@ public class ProfilAktivnost extends Activity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
+			Toast.makeText(ProfilAktivnost.this, "Dio aplikacije koji je još u razvoju...", Toast.LENGTH_LONG).show();
 			return true;
+			
+		}else if(id==R.id.o_aplikaciji){
+			o_razvoju sd = new o_razvoju(this);
+			sd.show();
+			return true;
+			
 		}
 		return super.onOptionsItemSelected(item);
-	
-	}*/
+	}
 }
+

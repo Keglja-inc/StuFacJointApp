@@ -3,6 +3,10 @@
 
     <string name="nazivaplikacije">Stufac Joint</string>
     <string name="app_name">Stufac Joint</string>
+    <string name="ime_sveucilista">Ime Sveučilišta</string>
+    <string name="ime_fakulteta">Ime Fakulteta</string>
+    <string name="action_settings">Opcije</string>
+    <string name="o_aplikaciji">O aplikaciji</string>
     <string name="app_podaci">Podaci o aplikaciji</string>
     <string name="title_activity_profil_aktivnost">Profil</string>
     <string name="profilgumb">Otvaranje aktivnosti profil</string>

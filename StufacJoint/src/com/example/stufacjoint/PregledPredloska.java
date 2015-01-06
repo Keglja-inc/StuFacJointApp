@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class PregledPredloska extends Activity {
 
@@ -66,7 +67,14 @@ public class PregledPredloska extends Activity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
+			Toast.makeText(PregledPredloska.this, "Dio aplikacije koji je još u razvoju...", Toast.LENGTH_LONG).show();
 			return true;
+			
+		}else if(id==R.id.o_aplikaciji){
+			o_razvoju sd = new o_razvoju(this);
+			sd.show();
+			return true;
+			
 		}
 		return super.onOptionsItemSelected(item);
 	}

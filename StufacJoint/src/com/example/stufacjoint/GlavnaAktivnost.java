@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class GlavnaAktivnost extends Activity {
 
@@ -16,6 +17,8 @@ public class GlavnaAktivnost extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_glavna_aktivnost);
 		
+		
+	
 		
 		ImageButton loginforma=(ImageButton)findViewById(R.id.homegumb);
 		
@@ -87,6 +90,8 @@ public class GlavnaAktivnost extends Activity {
 					}
 				});
 	}
+	
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -96,14 +101,22 @@ public class GlavnaAktivnost extends Activity {
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(MenuItem lista) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = lista.getItemId();
-		if (id == R.id.settings_list) {
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			Toast.makeText(GlavnaAktivnost.this, "Dio aplikacije koji je još u razvoju...", Toast.LENGTH_LONG).show();
 			return true;
+			
+		}else if(id==R.id.o_aplikaciji){
+			o_razvoju sd = new o_razvoju(this);
+			sd.show();
+			return true;
+			
+			
 		}
-		return super.onOptionsItemSelected(lista);
+		return super.onOptionsItemSelected(item);
 	}
 }
