@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        
+        android:defaultValue="true"
+        android:key="otvaranje_dialoga"
+        android:summary="@string/Opis_za_dialog"
+        android:title="@string/Omoguci_otvaranje_dialoga_sa_opcije" />
+    
+    <CheckBoxPreference
+        
+        android:defaultValue="true"
+        android:key="pristup_serveru"
+        android:summary="@string/omoguci"
+        android:title="@string/pristupanjeserveru" />
+    
+    <SwitchPreference
+        
+        android:key="pomicanjesvajpova"
+        android:summary="Omogućuje korištenje kliznog ekrana za posljednju aktivnost"
+        android:title="Korištenje kliznih aktivnosti"
+        
+        />
+    
+        
+
+</PreferenceScreen>

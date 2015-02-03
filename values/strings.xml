@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="nazivaplikacije">Stufac Joint</string>
+    <string name="app_name">Stufac Joint</string>
+    <string name="ime_sveucilista">Ime Sveučilišta</string>
+    <string name="ime_fakulteta">Ime Fakulteta</string>
+    <string name="action_settings">Opcije</string>
+    <string name="o_aplikaciji">O aplikaciji</string>
+    <string name="app_podaci">Podaci o aplikaciji</string>
+    <string name="title_activity_profil_aktivnost">Profil</string>
+    <string name="profilgumb">Otvaranje aktivnosti profil</string>
+    <string name="activity_profil_aktivnost">Aktivnost profil</string>
+    <string name="lista_interesa">Popis Sveučilišta</string>
+    <string name="title_activity_login_aktivnos">Login</string>
+    <string name="Logingumb">Login</string>
+    <string name="stufacjoint">StuFac Joint</string>
+    <string name="ime">Korisničko ime:</string>
+    <string name="lozinka">Lozinka:</string>
+    <string name="Login">Logiraj</string>
+    <string name="attempts">Preostalo pokušaja:</string>
+    <string name="title_activity_predlosci_interesa">Predlošci Interesa</string>
+    <string name="info">Aplikacija se trenutno nalazi u završnoj fazi. Ova aplikacija izrađena je za potrebe kolegija Analiza i razvoj programa.</string>
+    <string name="title_activity_info_aktivnost">Info</string>
+    <string name="loginopis">Napomena:\nKorisničko ime: admin\nLozinka: admin\nKako bi se logirali u aplikaciju unesite navedene podatke te click na gumb logiraj.</string>
+    <string name="spremi">Spremi</string>
+    <string name="odustani">Odustani</string>
+    <string name="poruka">Ovaj gumb trenutno nije u funkciji.</string>
+    <string name="listainteresa">Dio aplikacije koji će biti odrađen u drugoj fazi.</string>
+    <string name="title_activity_mojal_lista_interesa">Popis interesa</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="napravi_predlozak">Novi Predložak</string>
+    <string name="title_activity_novi_predlozak">Novi Predložak</string>
+    <string name="title_activity_pregled_predloska">Pregled Predloška</string>
+    <string name="title_activity_web_lokacija">Web Lokacija</string>
+    <string name="facebook_app_id">317389008470430</string>
+    <string name="title_activity_glavna_aktivnost">StuFac Joint</string>
+    <string name="zaposlenici">Aplikaciju izradili:\nAlen Kostanjevec\nIvan Rostohar\nDeni Slunjski\nDavorin Špičko\n</string>
+    <string name="title_activity_settings">Opcije</string>
+    <string name="title_activity_fakulteti">Lista fakulteta</string>
+
+    <string name="pristupanjeserveru">Pristupanje serveru</string>
+    <string name="omoguci">Omogući pristupanje serveru za dohvaćanje podataka</string>
+    
+    <string-array name="action_settings">
+        <item>Opcije</item>
+        <item>Novosti</item>
+        <item>O aplikaciji</item>
+    </string-array>
+
+    <string name="title_activity_probnislucaj">Probnislucaj</string>
+    <string name="title_activity_glavnaaaaa">Glavnaaaaa</string>
+    <string name="title_activity_fakulteti_aktivnost">FakultetiAktivnost</string>
+
+</resources>

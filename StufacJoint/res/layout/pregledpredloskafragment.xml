@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.stufacjoint.PregledPredloska" >
+   
+	<LinearLayout
+	    android:id="@+id/linearLayout10"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true" >
+
+	    
+	    
+        <ImageButton
+            android:id="@+id/homegumb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/homebutton" />
+
+        <ImageButton
+            android:id="@+id/facebookshare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/fb" />
+        
+        <Button
+	    android:id="@+id/weblokacija"
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:text="Web lokacija" />
+    </LinearLayout>
+
+	<TextView
+	    android:id="@+id/tpredlozaktekst"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    
+	    android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true"
+	    android:text="Opis predloška: " />
+	
+	<TextView
+	    android:id="@+id/textView2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentLeft="true"
+	    
+	    android:text="Predložak:" />
+
+</RelativeLayout>

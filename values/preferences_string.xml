@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    
+    <string name="Omoguci_otvaranje_dialoga_sa_opcije">Otvaranje dialoga-Opcije</string>
+    <string name="Opis_za_dialog">Ovdje možete isključiti otvaranje i zatvaranje dialoga koji vam pokazuje podatke o aplikaciji</string>
+    
+    <string name="Klizniekran">Koristi klizne programe</string>
+    <string name="opis_klizni_program">Omogućuje gašenje i paljenje kliznih ekrana</string>
+    
+</resources>
