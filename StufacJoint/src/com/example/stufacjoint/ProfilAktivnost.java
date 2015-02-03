@@ -1,45 +1,23 @@
 package com.example.stufacjoint;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.view.MotionEvent;
 import android.widget.Toast;
+
 
 public class ProfilAktivnost extends Activity {
 
-	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_profil_aktivnost);
 		
 		
-		Button odustani=(Button)findViewById(R.id.odustanigumb);
-		odustani.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent i=new Intent(getApplicationContext(), GlavnaAktivnost.class);
-				startActivity(i);
-				
-			}
-		});
-		
-		 Button spremi=(Button)findViewById(R.id.spremigumb);
-		  	spremi.setOnClickListener(new OnClickListener() {
-				
-				@SuppressLint("ShowToast")
-				@Override
-				public void onClick(View arg0) {
-					Toast.makeText(getApplicationContext(), "Ovaj gumb trenutno nije u funkciji", Toast.LENGTH_SHORT).show();
-					
-				}
-			});
 	}
 
 	@Override
@@ -54,18 +32,55 @@ public class ProfilAktivnost extends Activity {
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
+		SharedPreferences preferences =PreferenceManager.getDefaultSharedPreferences(this);
+		boolean ugasiDialog = preferences.getBoolean("otvaranje_dialoga", true);
+		
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
-			Toast.makeText(ProfilAktivnost.this, "Dio aplikacije koji je još u razvoju...", Toast.LENGTH_LONG).show();
+			Intent novi=new Intent(this, SettingsActivity.class);
+			startActivity(novi);
+			return true;
+		}else if(id==R.id.o_aplikaciji){
+			if(ugasiDialog){
+			ORazvoju sd = new ORazvoju(this);
+			sd.show();
+			}else{
+				Toast.makeText(this, "Opcija je onemooguæena", Toast.LENGTH_LONG).show();
+			}
 			return true;
 			
-		}else if(id==R.id.o_aplikaciji){
-			o_razvoju sd = new o_razvoju(this);
-			sd.show();
-			return true;
 			
 		}
 		return super.onOptionsItemSelected(item);
 	}
-}
+	
 
+	
+	float x1 = 0, x2 = 0;
+	public boolean onTouchEvent(MotionEvent touchevent) {		
+		// check if swipe is enabled in the preferences by the user
+		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+		boolean swipeEnabled = preferences.getBoolean("pomicanjesvajpova", true);		
+		if(!swipeEnabled) return false;
+		
+		switch (touchevent.getAction()) {
+			case MotionEvent.ACTION_DOWN: {
+				x1 = touchevent.getX();
+				break;
+			}
+			case MotionEvent.ACTION_UP: {
+				x2 = touchevent.getX();
+				if (x1 < x2) {
+					onBackPressed();
+					Intent i=new Intent(getApplicationContext(), GlavnaAktivnost.class);
+					startActivity(i);
+					
+					
+				}
+			}
+		}
+		return false;
+	
+
+	}
+	}

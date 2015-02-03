@@ -1,9 +1,12 @@
 package com.example.stufacjoint;
 
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -55,15 +58,23 @@ public class NoviPredlozak extends Activity {
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
+		SharedPreferences preferences =PreferenceManager.getDefaultSharedPreferences(this);
+		boolean ugasiDialog = preferences.getBoolean("otvaranje_dialoga", true);
+		
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
-			Toast.makeText(NoviPredlozak.this, "Dio aplikacije koji je još u razvoju...", Toast.LENGTH_LONG).show();
+			Intent novi=new Intent(this, SettingsActivity.class);
+			startActivity(novi);
+			return true;
+		}else if(id==R.id.o_aplikaciji){
+			if(ugasiDialog){
+			ORazvoju sd = new ORazvoju(this);
+			sd.show();
+			}else{
+				Toast.makeText(this, "Opcija je onemooguæena", Toast.LENGTH_LONG).show();
+			}
 			return true;
 			
-		}else if(id==R.id.o_aplikaciji){
-			o_razvoju sd = new o_razvoju(this);
-			sd.show();
-			return true;
 			
 		}
 		return super.onOptionsItemSelected(item);

@@ -33,7 +33,7 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="19dp"
-        android:text="Alen Kostanjevec\nIvan Rostohar\nDeni Slunjski\nDavorin Špičko\n" />
+        android:text="@string/zaposlenici" />
     	
 
 </RelativeLayout>
