@@ -1,0 +1,8 @@
+INDEX VERSION 1.127+D:\AIR\Projekt\.metadata\.plugins\org.eclipse.jdt.core
+2386372842.index
+213453693.index
+4031170722.index
+1796462255.index
+3378380344.index
+2607088009.index
+3065416851.index
