@@ -25,12 +25,17 @@ public class ListaAdapter extends BaseExpandableListAdapter {
 	// child data in format of header title, child title
 	private HashMap<String, List<String>> _listDataChild;
 	
-	
+	/*
+	 * Postavlja vrijednost varijbli, za ubacivanje fragmenta u glavnu aktivnost
+	 */
 	public void setInflater(LayoutInflater inflater,Activity activity) {
 		this.activity = activity;
 		this.inflater= inflater;
 	}
 
+		/*
+		 * Postavlja vrijednosti varijabli za metodu ListaAdapter
+		 */
 	public ListaAdapter(Context _context, List<String> _listDataHeader,
 			HashMap<String, List<String>> _listDataChild) {
 		super();
@@ -40,19 +45,32 @@ public class ListaAdapter extends BaseExpandableListAdapter {
 	}
 	
 	
-
+	/*
+	 * (non-Javadoc)
+	 * @see android.widget.ExpandableListAdapter#getChild(int, int)
+	 */
 	@SuppressLint("InflateParams")
 	@Override
 	public Object getChild(int groupPosition, int childPosititon) {
 		return this._listDataChild.get(this._listDataHeader.get(groupPosition))
 				.get(childPosititon);
 	}
-
+	
+	/*
+	 * (non-Javadoc)
+	 * @see android.widget.ExpandableListAdapter#getChildId(int, int)
+	 */
+	
 	@Override
 	public long getChildId(int groupPosition, int childPosition) {
 		return childPosition;
 	}
-
+	
+	/*
+	 * (non-Javadoc)
+	 * @see android.widget.ExpandableListAdapter#getChildView(int, int, boolean, android.view.View, android.view.ViewGroup)
+	 */
+	
 	@SuppressLint("InflateParams")
 	@Override
 	public View getChildView(int groupPosition, final int childPosition,
@@ -86,27 +104,43 @@ public class ListaAdapter extends BaseExpandableListAdapter {
 		return convertView;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see android.widget.ExpandableListAdapter#getChildrenCount(int)
+	 */
 	@Override
 	public int getChildrenCount(int groupPosition) {
 		return this._listDataChild.get(this._listDataHeader.get(groupPosition))
 				.size();
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see android.widget.ExpandableListAdapter#getGroup(int)
+	 */
 	@Override
 	public Object getGroup(int groupPosition) {
 		return this._listDataHeader.get(groupPosition);
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see android.widget.ExpandableListAdapter#getGroupCount()
+	 */
 	@Override
 	public int getGroupCount() {
 		return this._listDataHeader.size();
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see android.widget.ExpandableListAdapter#getGroupId(int)
+	 */
 	@Override
 	public long getGroupId(int groupPosition) {
 		return groupPosition;
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see android.widget.ExpandableListAdapter#getGroupView(int, boolean, android.view.View, android.view.ViewGroup)
+	 */
 	@SuppressLint("InflateParams")
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
@@ -125,12 +159,18 @@ public class ListaAdapter extends BaseExpandableListAdapter {
 
 		return convertView;
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see android.widget.ExpandableListAdapter#hasStableIds()
+	 */
 	@Override
 	public boolean hasStableIds() {
 		return false;
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see android.widget.ExpandableListAdapter#isChildSelectable(int, int)
+	 */
 	@Override
 	public boolean isChildSelectable(int groupPosition, int childPosition) {
 		return true;

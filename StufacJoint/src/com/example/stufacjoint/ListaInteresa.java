@@ -47,7 +47,11 @@ public class ListaInteresa extends ListActivity {
 
 	// Hashmap for ListView
 	ArrayList<HashMap<String, String>> contactList;
-
+	
+	/*
+	 * (non-Javadoc)
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -62,7 +66,10 @@ public class ListaInteresa extends ListActivity {
 
 		ImageButton pocetna = (ImageButton) findViewById(R.id.homegumb);
 		pocetna.setOnClickListener(new OnClickListener() {
-
+			/*
+			 * (non-Javadoc)
+			 * @see android.view.View.OnClickListener#onClick(android.view.View)
+			 */
 			@Override
 			public void onClick(View arg0) {
 				Intent i = new Intent(getApplicationContext(),
@@ -71,10 +78,15 @@ public class ListaInteresa extends ListActivity {
 
 			}
 		});
+		
+		/*
+		 * kreira noviPredlozak
+		 */
 
 		ImageButton novi_predlozak = (ImageButton) findViewById(R.id.novipredlozak);
 		novi_predlozak.setOnClickListener(new OnClickListener() {
-
+			
+			
 			@Override
 			public void onClick(View arg0) {
 				Intent i = new Intent(getApplicationContext(),

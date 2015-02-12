@@ -4,6 +4,7 @@ import android.app.ListActivity;
 import android.os.Bundle;
 
 public class FakultetiAktivnost extends ListActivity {
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
