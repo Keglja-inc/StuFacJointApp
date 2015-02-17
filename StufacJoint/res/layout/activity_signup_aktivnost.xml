@@ -8,19 +8,19 @@
         android:id="@+id/ime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/ime_korisnika" />
+        android:hint="ime korisnika" />
 
     <EditText
         android:id="@+id/prezime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/prezime_korisnika" />
+        android:hint="prezime korisnika" />
 
     <EditText
         android:id="@+id/mailadress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/mailadresa" />
+        android:hint="mailadresa" />
 
   
 
@@ -28,14 +28,14 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/lozinka_"
+        android:hint="lozinka_"
         android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/password2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/potvrda_lozinke"
+        android:hint="potvrda_lozinke"
         android:inputType="textPassword" />
 
     <LinearLayout

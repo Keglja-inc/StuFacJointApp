@@ -14,7 +14,11 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
-
+/**
+ * 
+ * @author Alen
+ * @version 1.3
+ */
 public class ServiceHandler {
 
 	static String response = null;
@@ -25,21 +29,22 @@ public class ServiceHandler {
 
 	}
 
-	/*
+	/**
 	 * Making service call
-	 * @url - url to make request
-	 * @method - http request method
+	 * @param url - url to make request
+	 * @param method - http request method
 	 * */
 	public String makeServiceCall(String url, int method) {
 		return this.makeServiceCall(url, method, null);
 	}
 
-	/*
+	/**
 	 * Making service call
-	 * @url - url to make request
-	 * @method - http request method
-	 * @params - http request params
-	 * */
+	 * @param url - url to make request
+	 * @param method - http request method
+	 * @param params - http request params
+	 */
+	
 	public String makeServiceCall(String url, int method,
 			List<NameValuePair> params) {
 		try {

@@ -16,6 +16,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.example.stufacjoint.ws.ServiceHandler;
+
 import android.annotation.SuppressLint;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
@@ -36,7 +38,11 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
-
+/**
+ * 
+ * @author Alen, Deni
+ * @version 1.3
+ */
 public class MojalListaInteresa extends ListActivity {
 	
 	
@@ -68,7 +74,9 @@ public class MojalListaInteresa extends ListActivity {
 
 	public String a;
 
-	
+	/**
+	 * 
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -86,7 +94,10 @@ public class MojalListaInteresa extends ListActivity {
 		final ListView lv = getListView();
 		
 		lv.setOnItemClickListener(new OnItemClickListener() {
-
+			
+			/**
+			 * 
+			 */
 			@SuppressLint("ShowToast")
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
@@ -135,9 +146,15 @@ public class MojalListaInteresa extends ListActivity {
 
 		
 	}
-	
+	/**
+	 * 
+	 * @author Deni
+	 * @version 1.4
+	 */
 	private class GetInterests extends AsyncTask<Void, Void, Void> {
-
+		/**
+		 * 
+		 */
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
@@ -148,7 +165,9 @@ public class MojalListaInteresa extends ListActivity {
 			pDialog.show();
 
 		}
-
+		/**
+		 * 
+		 */
 		@Override
 		protected Void doInBackground(Void... arg0) {
 			// Creating service handler class instance
@@ -197,7 +216,10 @@ public class MojalListaInteresa extends ListActivity {
 
 			return null;
 		}
-
+		
+		/**
+		 * 
+		 */
 		@Override
 		protected void onPostExecute(Void result) {
 			super.onPostExecute(result);
@@ -223,7 +245,9 @@ public class MojalListaInteresa extends ListActivity {
 		ProgressDialog dialog;
 		
 		
-		
+		/**
+		 * 
+		 */
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
@@ -232,13 +256,18 @@ public class MojalListaInteresa extends ListActivity {
 		}
 
 		
-
+		/**
+		 * 
+		 */
 		@Override
 		protected JSONObject doInBackground(Void... params) {
 			
 			return postJsonObject("http://stufacjoint.us.wak-apps.com/1bb74c94d73fdfe3801f197bab6ffb93", makingJson());
 		}
-
+		
+		/**
+		 * 
+		 */
 		@Override
 		protected void onPostExecute(JSONObject result) {
 			super.onPostExecute(result);
@@ -298,6 +327,13 @@ public class MojalListaInteresa extends ListActivity {
 		
 	}
 	
+	/**
+	 * Metoda za kreiranje JSON-a za slanje ID-a interesa
+	 * na server, kako bi se uz pomoć ID-a interesa
+	 * moglo pristupiti podacima o fakultetima koji zadovoljavaju
+	 * uvijet
+	 * @return jObj - ID interesa
+	 */
 	public JSONObject makingJson() {
 
 		JSONObject jObj = new JSONObject();
@@ -313,7 +349,13 @@ public class MojalListaInteresa extends ListActivity {
 		return jObj;
 	}
 	
-	
+	/**
+	 * Metoda za slanje JSON objekta na server 
+	 * 
+	 * @param url - na koju adresu se šalje JSON objekt
+	 * @param loginJobj - pretvara login u string
+	 * @return json - za postanje na server
+	 */
 	public JSONObject postJsonObject(String url, JSONObject loginJobj){
         InputStream inputStream = null;
         String result = "";
@@ -377,6 +419,12 @@ public class MojalListaInteresa extends ListActivity {
         return json;
     }
 	
+	/**
+	 * Metoda za pretvaranje ulaznih podataka u string
+	 * @param inputStream - ulazni podatci
+	 * @return result - rezultat pretvaranja
+	 * @throws IOException
+	 */
 	private String convertInputStreamToString(InputStream inputStream) throws IOException{
         BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
         String line = "";
@@ -390,14 +438,18 @@ public class MojalListaInteresa extends ListActivity {
         return result;
     }
 	
-	
+	/**
+	 * 
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.mojal_lista_interesa, menu);
 		return true;
 	}
-
+	/**
+	 * 
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
@@ -426,6 +478,9 @@ public class MojalListaInteresa extends ListActivity {
 	}
 	
 	float x1 = 0, x2 = 0;
+	/**
+	 * 
+	 */
 	public boolean onTouchEvent(MotionEvent touchevent) {		
 		// check if swipe is enabled in the preferences by the user
 		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);

@@ -5,11 +5,17 @@ import com.example.stufacjoint.R;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
-
+/**
+ * 
+ * @author Alen
+ * @version 1.3
+ */
 @SuppressLint("NewApi")
 public class SettingsFragment extends PreferenceFragment {
 	
-	
+	/**
+	 * 
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

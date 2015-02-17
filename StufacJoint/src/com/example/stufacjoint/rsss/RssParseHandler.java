@@ -6,7 +6,12 @@ import java.util.List;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
-
+/**
+ * 
+ * @author Alen, Deni
+ * @version 1.3
+ *
+ */
 public class RssParseHandler extends DefaultHandler {
 	
 	
@@ -21,15 +26,23 @@ private List<RssItem> rssItems;
 	private boolean parsingLink;
 	
 	
-	
+	/**
+	 * parsiranje RSS-a u listu
+	 */
 	public RssParseHandler() {
 		rssItems = new ArrayList<RssItem>();
 	}
 	
+	/**
+	 * Dohvaća item-e iz RSS-a i vraća ih u bliku liste
+	 * @return rssItems
+	 */
 	public List<RssItem> getItems() {
 		return rssItems;
 	}
-	
+	/**
+	 * 
+	 */
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 		if ("item".equals(qName)) {
@@ -41,7 +54,9 @@ private List<RssItem> rssItems;
 			
 		}
 	}
-	
+	/**
+	 * 
+	 */
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
 		if ("item".equals(qName)) {
@@ -54,7 +69,9 @@ private List<RssItem> rssItems;
 			
 		}
 	}
-	
+	/**
+	 * 
+	 */
 	@Override
 	public void characters(char[] ch, int start, int length) throws SAXException {
 		if (parsingTitle) {

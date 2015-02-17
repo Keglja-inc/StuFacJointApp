@@ -5,10 +5,18 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import com.example.stufacjoint.fragments.SettingsFragment;
+/**
+ * 
+ * @author Deni
+ * @version 1.3
+ *
+ */
 
 @SuppressLint("NewApi")
 public class SettingsActivity extends Activity {
-	
+	/**
+	 * 
+	 */
 	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -5,7 +5,11 @@ import java.util.Date;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
-
+/**
+ * 
+ * @author Deni
+ * @version 1.4
+ */
 @Table (name = "Sveucilista")
 public class Sveucilista extends Model {
 	
@@ -34,7 +38,18 @@ public class Sveucilista extends Model {
 			
 		}
 		
-
+		/**
+		 * metoda za punjenje zapisa sveucilišta
+		 * 
+		 * @param vrijeme 
+		 * @param brojZapisa
+		 * @param podaci
+		 * @param idVisokogUcilista
+		 * @param naziv
+		 * @param tipVisokogUcilista_idtipVisokogUcilista
+		 * @param statusVisokogUcilista_idstatusVisokogUcilista
+		 * @param zadnjaIzmjena
+		 */
 		public Sveucilista(Date vrijeme, long brojZapisa, long podaci,
 				long idVisokogUcilista, String naziv,
 				long tipVisokogUcilista_idtipVisokogUcilista,
@@ -52,9 +67,7 @@ public class Sveucilista extends Model {
 		}
 
 
-		/* (non-Javadoc)
-		 * @see com.example.stufacjoint.db.Sveuciliste#getVrijeme()
-		 */
+
 		public Date getVrijeme() {
 			return vrijeme;
 		}
@@ -65,9 +78,6 @@ public class Sveucilista extends Model {
 		}
 
 
-		/* (non-Javadoc)
-		 * @see com.example.stufacjoint.db.Sveuciliste#getBrojZapisa()
-		 */
 		public long getBrojZapisa() {
 			return brojZapisa;
 		}
@@ -78,9 +88,6 @@ public class Sveucilista extends Model {
 		}
 
 
-		/* (non-Javadoc)
-		 * @see com.example.stufacjoint.db.Sveuciliste#getPodaci()
-		 */
 		public long getPodaci() {
 			return podaci;
 		}
@@ -91,9 +98,6 @@ public class Sveucilista extends Model {
 		}
 
 
-		/* (non-Javadoc)
-		 * @see com.example.stufacjoint.db.Sveuciliste#getIdVisokogUcilista()
-		 */
 		public long getIdVisokogUcilista() {
 			return idVisokogUcilista;
 		}
@@ -104,9 +108,6 @@ public class Sveucilista extends Model {
 		}
 
 
-		/* (non-Javadoc)
-		 * @see com.example.stufacjoint.db.Sveuciliste#getNaziv()
-		 */
 		public String getNaziv() {
 			return naziv;
 		}
@@ -117,9 +118,6 @@ public class Sveucilista extends Model {
 		}
 
 
-		/* (non-Javadoc)
-		 * @see com.example.stufacjoint.db.Sveuciliste#getTipVisokogUcilista_idtipVisokogUcilista()
-		 */
 		public long getTipVisokogUcilista_idtipVisokogUcilista() {
 			return tipVisokogUcilista_idtipVisokogUcilista;
 		}
@@ -131,9 +129,6 @@ public class Sveucilista extends Model {
 		}
 
 
-		/* (non-Javadoc)
-		 * @see com.example.stufacjoint.db.Sveuciliste#getStatusVisokogUcilista_idstatusVisokogUcilista()
-		 */
 		public long getStatusVisokogUcilista_idstatusVisokogUcilista() {
 			return statusVisokogUcilista_idstatusVisokogUcilista;
 		}
@@ -145,9 +140,6 @@ public class Sveucilista extends Model {
 		}
 
 
-		/* (non-Javadoc)
-		 * @see com.example.stufacjoint.db.Sveuciliste#getZadnjaIzmjena()
-		 */
 		public Date getZadnjaIzmjena() {
 			return zadnjaIzmjena;
 		}

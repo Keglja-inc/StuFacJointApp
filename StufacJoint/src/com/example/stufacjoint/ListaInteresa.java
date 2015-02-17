@@ -7,6 +7,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.example.stufacjoint.ws.ServiceHandler;
+
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -25,6 +27,11 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
+/**
+ * 
+ * @author Deni
+ * @version 1.3
+ */
 
 public class ListaInteresa extends ListActivity {
 
@@ -48,9 +55,8 @@ public class ListaInteresa extends ListActivity {
 	// Hashmap for ListView
 	ArrayList<HashMap<String, String>> contactList;
 	
-	/*
-	 * (non-Javadoc)
-	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	/**
+	 * 
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -66,9 +72,8 @@ public class ListaInteresa extends ListActivity {
 
 		ImageButton pocetna = (ImageButton) findViewById(R.id.homegumb);
 		pocetna.setOnClickListener(new OnClickListener() {
-			/*
-			 * (non-Javadoc)
-			 * @see android.view.View.OnClickListener#onClick(android.view.View)
+			/**
+			 * 
 			 */
 			@Override
 			public void onClick(View arg0) {
@@ -86,7 +91,9 @@ public class ListaInteresa extends ListActivity {
 		ImageButton novi_predlozak = (ImageButton) findViewById(R.id.novipredlozak);
 		novi_predlozak.setOnClickListener(new OnClickListener() {
 			
-			
+			/**
+			 * 
+			 */
 			@Override
 			public void onClick(View arg0) {
 				Intent i = new Intent(getApplicationContext(),
@@ -97,9 +104,16 @@ public class ListaInteresa extends ListActivity {
 		});
 
 	}
-
+	/**
+	 * 
+	 * @author Alen
+	 * @version 1.3
+	 */
 	private class GetContacts extends AsyncTask<Void, Void, Void> {
-
+		
+		/**
+		 * 
+		 */
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
@@ -110,7 +124,9 @@ public class ListaInteresa extends ListActivity {
 			pDialog.show();
 
 		}
-
+		/**
+		 * 
+		 */
 		@Override
 		protected Void doInBackground(Void... arg0) {
 			// Creating service handler class instance
@@ -164,7 +180,9 @@ public class ListaInteresa extends ListActivity {
 
 			return null;
 		}
-
+		/**
+		 * 
+		 */
 		@Override
 		protected void onPostExecute(Void result) {
 			super.onPostExecute(result);
@@ -184,14 +202,18 @@ public class ListaInteresa extends ListActivity {
 		}
 
 	}
-
+	/**
+	 * 
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.lista_interesa, menu);
 		return true;
 	}
-
+	/**
+	 * 
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
@@ -222,7 +244,9 @@ public class ListaInteresa extends ListActivity {
 	}
 
 	float x1 = 0, x2 = 0;
-
+	/**
+	 * 
+	 */
 	public boolean onTouchEvent(MotionEvent touchevent) {
 		// check if swipe is enabled in the preferences by the user
 		SharedPreferences preferences = PreferenceManager

@@ -1,5 +1,6 @@
 package com.example.stufacjoint;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,44 +19,37 @@ import android.widget.Toast;
 import com.example.stufacjoint.rsss.RssItem;
 import com.example.stufacjoint.rsss.RssReader;
 
+/**
+ * 
+ * @author Deni
+ * @version 1.3
+ *
+ */
 public class GlavnaAktivnost extends Activity {
 
 	String a;
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.app.Activity#onCreate(android.os.Bundle) poziva se onCreate
-	 * metoda od nadklase Activity postavlja se sadržaj koji je definiran
-	 * layout-om activity_glavna_aktivnost
-	 */
-
+	
+	
+/**
+ * 
+ */
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_glavna_aktivnost);
 
-		/*
-		 * poziv metode koja bude prikazivala linkove s rss linka mojamatura
-		 */
 
 		rss();
 
-		/*
-		 * Ponašanje ukoliko se klikne na button "homegumb" postavljanje
-		 * onClickListener-a za provjeru odabira buttona
-		 */
-
+		
+		//defirnanje gumba za vracanje na pocetnu aktivnost
 		ImageButton pocetna = (ImageButton) findViewById(R.id.homegumb);
 		pocetna.setOnClickListener(new OnClickListener() {
 
-			/*
-			 * (non-Javadoc)
+			/**
 			 * 
-			 * @see android.view.View.OnClickListener#onClick(android.view.View)
-			 * traži ulazni argument(button na koji je kliknuto) ako se radi o
-			 * homegumb-u s glavne aktivnosti vraća na LoginAktivnost.
 			 */
-
+			
 			@Override
 			public void onClick(View arg0) {
 				Intent i = new Intent(getApplicationContext(),
@@ -65,13 +59,15 @@ public class GlavnaAktivnost extends Activity {
 			}
 		});
 
-		/*
-		 * ponašanje za profilgumb, prikaz ProfilAktivnosti
-		 */
-
+		
+		//Definiranje gumba za prikaz profila
 		ImageButton vlastitaLista = (ImageButton) findViewById(R.id.profilgumb);
 		vlastitaLista.setOnClickListener(new OnClickListener() {
 
+			
+			/**
+			 * 
+			 */
 			@Override
 			public void onClick(View arg0) {
 				Intent i = new Intent(getApplicationContext(),
@@ -88,7 +84,10 @@ public class GlavnaAktivnost extends Activity {
 
 		ImageButton noviPredlozak = (ImageButton) findViewById(R.id.listagumb);
 		noviPredlozak.setOnClickListener(new OnClickListener() {
-
+			
+			/**
+			 * 
+			 */
 			@Override
 			public void onClick(View arg0) {
 				Intent i = new Intent(getApplicationContext(),
@@ -100,10 +99,11 @@ public class GlavnaAktivnost extends Activity {
 
 	}
 
-	/*
-	 * metoda za dohvaćanje podataka s rss linka mojamatura
+	/**
+	 * metoda za dohvaćanje i podataka s rss linka,
+	 * ne prima paramatre
 	 */
-
+	
 	public void rss() {
 
 		try {
@@ -129,26 +129,20 @@ public class GlavnaAktivnost extends Activity {
 
 	}
 
-	@Override
-	/*
-	 * (non-Javadoc)
+	/**
 	 * 
-	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
-	 * Ponašanje predefiniranog buttona "menu"
 	 */
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.glavna_aktivnost, menu);
 		return true;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 * 
-	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
-	 * prikaz mogućnosti koje će se pokazati ukoliko korisnik klikne na menu
-	 * button na svom android telefonu
 	 */
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will

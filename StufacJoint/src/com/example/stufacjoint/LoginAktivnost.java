@@ -19,7 +19,11 @@ import com.facebook.android.DialogError;
 import com.facebook.android.Facebook;
 import com.facebook.android.Facebook.DialogListener;
 import com.facebook.android.FacebookError;
-
+/**
+ * 
+ * @author Deni, Alen
+ *	@version 1.3
+ */
 @SuppressLint("ShowToast")
 public class LoginAktivnost extends Activity {
 
@@ -30,7 +34,10 @@ public class LoginAktivnost extends Activity {
 	private TextView attempts;
 	private Button login;
 	int counter = 3;
-
+	
+	/**
+	 * 
+	 */
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +54,11 @@ public class LoginAktivnost extends Activity {
 		fb = new Facebook(app_id);
 
 		Button facebook = (Button) findViewById(R.id.facebookgumb);
-
+		
 		facebook.setOnClickListener(new OnClickListener() {
-
+			/**
+			 * 
+			 */
 			@Override
 			public void onClick(View v) {
 
@@ -70,7 +79,9 @@ public class LoginAktivnost extends Activity {
 
 					fb.authorize(LoginAktivnost.this, new String[] { "email" },
 							new DialogListener() {
-
+								/**
+								 * 
+								 */
 								@Override
 								public void onFacebookError(FacebookError e) {
 									Toast.makeText(LoginAktivnost.this,
@@ -78,7 +89,9 @@ public class LoginAktivnost extends Activity {
 											Toast.LENGTH_SHORT).show();
 
 								}
-
+								/**
+								 * 
+								 */
 								@Override
 								public void onError(DialogError e) {
 									Toast.makeText(
@@ -87,7 +100,9 @@ public class LoginAktivnost extends Activity {
 											Toast.LENGTH_SHORT).show();
 
 								}
-
+								/**
+								 * 
+								 */
 								@Override
 								public void onComplete(Bundle values) {
 									Intent i = new Intent(
@@ -96,7 +111,9 @@ public class LoginAktivnost extends Activity {
 									startActivity(i);
 
 								}
-
+								/**
+								 * 
+								 */
 								@Override
 								public void onCancel() {
 									Toast.makeText(LoginAktivnost.this,
@@ -114,7 +131,9 @@ public class LoginAktivnost extends Activity {
 		});
 
 		login.setOnClickListener(new OnClickListener() {
-
+			/**
+			 * 
+			 */
 			public void onClick(View arg0) {
 
 				if (ime.getText().toString().equals("admin")
