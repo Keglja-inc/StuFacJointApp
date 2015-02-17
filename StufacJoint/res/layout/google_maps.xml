@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center" 
+    >
+
+    
+<fragment
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.MapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="110dp"
+    android:layout_marginBottom="10dp" />
+
+<RelativeLayout
+    android:id="@+id/googlemapsgumbovi"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true" >
+
+    <Button
+        android:id="@+id/btn_restorani"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:onClick="onClickRestorani"
+        android:text="Obližnji restorani" />
+
+    <Button
+        android:id="@+id/web_adresa"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_restorani"
+        android:onClick="onClickfaksi"
+        android:text="Web adresa" />
+
+    <Button
+        android:id="@+id/btn_kulturni_sadržaj"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/web_adresa"
+        android:layout_alignParentRight="true"
+        android:onClick="onClickKulturniSadrzaj"
+        android:text="Obližnja kazališta" />
+</RelativeLayout>
+
+</RelativeLayout>
